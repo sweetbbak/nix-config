@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    nicotine-plus
     gtkcord4
     openutau
     sunvox

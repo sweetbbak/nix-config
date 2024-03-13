@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     cowsay
+    watershot
+    fish
+    scc
+    hyperfine
     lsof
     tgpt
     grimblast
