@@ -16,6 +16,7 @@
     POLKIT_BIN = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
   };
 
+  boot.tmp.cleanOnBoot = true;
   # Optimization settings and garbage collection automation
   nix = {
     settings = {
@@ -26,8 +27,6 @@
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
       ];
     };
-
-    boot.tmp.cleanOnBoot = true;
 
     gc = {
       automatic = true;
