@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     cowsay
+    xurls
+    libqalculate
+    lazygit
     watershot
     fish
     scc

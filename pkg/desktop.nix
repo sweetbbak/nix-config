@@ -27,6 +27,7 @@
     firefox
     gparted
     kitty
+    wezterm
     eww
     catppuccin-cursors
     catppuccin-gtk

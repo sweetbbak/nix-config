@@ -8,6 +8,7 @@
     gamescope
     yuzu-ea
     ryujinx
+    rpcs3
     dolphin-emu
     retroarchFull
 
