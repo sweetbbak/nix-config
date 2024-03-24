@@ -4,6 +4,8 @@
     noto-fonts-cjk
     noto-fonts-emoji
     liberation_ttf
+    gohufont
+    cozette
     fira-code
     fira-code-symbols
     mplus-outline-fonts.githubRelease

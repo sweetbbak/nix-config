@@ -1,5 +1,10 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    topgrade
+    moreutils
+    scrcpy
+    katana
+    typos
     cowsay
     xurls
     libqalculate

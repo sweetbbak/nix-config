@@ -6,6 +6,11 @@
     gotools
     goreleaser
 
+    # DB
+    badger
+    sqlite
+    sqlite-interactive
+
     # Rust
     rustup
 
@@ -48,8 +53,6 @@
     gdb
     patchelf
     shfmt
-    sqlite
-    sqlite-interactive
 
     # Lua and LSP
     luaPackages.image-nvim

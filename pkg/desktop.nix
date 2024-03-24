@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    ags
     nicotine-plus
+    xorg.xhost
+    sniffnet
     gtkcord4
     openutau
     sunvox
