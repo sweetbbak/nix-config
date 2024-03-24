@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    ags
     nicotine-plus
     xorg.xhost
     sniffnet
