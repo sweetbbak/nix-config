@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     topgrade
+    tofi
+    bemenu
+    j4-dmenu-desktop
     moreutils
     scrcpy
     katana
