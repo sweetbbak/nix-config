@@ -18,6 +18,7 @@
 
   boot.tmp.cleanOnBoot = true;
   services.envfs.enable = true;
+  services.gvfs.enable = true;
   # Optimization settings and garbage collection automation
   nix = {
     settings = {

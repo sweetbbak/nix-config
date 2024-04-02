@@ -9,5 +9,6 @@
     ./gaming.nix
     ./desktop.nix
     ./nix-tools.nix
+    # ./nyxpkgs.nix
   ];
 }

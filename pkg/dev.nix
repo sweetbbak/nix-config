@@ -7,6 +7,7 @@
     goreleaser
 
     # DB
+    boltbrowser
     badger
     sqlite
     sqlite-interactive

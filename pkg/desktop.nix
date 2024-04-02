@@ -1,6 +1,17 @@
 {pkgs, ...}: {
+  virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    blender
+    virtiofsd
+    anki
+    xfce.thunar-archive-plugin
+    gnome.file-roller
+    juno-theme
+    # librum
     nicotine-plus
+    google-chrome
+    swaynotificationcenter
+    kanata-with-cmd
     xorg.xhost
     sniffnet
     gtkcord4
@@ -17,7 +28,7 @@
     libnotify
     godot_4
     waydroid
-    nvtop
+    nvtopPackages.full
     btop
     glxinfo
     networkmanagerapplet

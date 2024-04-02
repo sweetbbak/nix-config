@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     topgrade
+    # netscanner
+    didder
     tofi
     bemenu
     j4-dmenu-desktop

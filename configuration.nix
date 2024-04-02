@@ -19,7 +19,7 @@
     ./scripts
     ./pkg
     ./modules
-    # ./modules/vfio
+    ./modules/vfio
   ];
 
   nixpkgs.config.allowUnfree = true;
