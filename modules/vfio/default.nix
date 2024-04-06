@@ -29,7 +29,7 @@
   ];
 
   boot.initrd.preDeviceCommands = ''
-    DEVS="0000:0b:00.0 0000:0b:00.1"
+    DEVS="1a:00.0 0a:00.1"  # put your GPU pci ID's here (DONT override the wrong drivers, you may end up with a non-working SSD or something)
     for DEV in $DEVS; do
       echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
     done

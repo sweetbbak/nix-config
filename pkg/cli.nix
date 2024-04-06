@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    wol # wake on LAN
     topgrade
+    evsieve
     # netscanner
     didder
     tofi
