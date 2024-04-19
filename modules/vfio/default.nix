@@ -39,7 +39,7 @@
   environment.systemPackages = with pkgs; [
     looking-glass-client
     scream
-    toybox
+    # toybox
     pciutils
     dnsmasq
     usbutils

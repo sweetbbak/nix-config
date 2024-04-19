@@ -1,6 +1,10 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    firewalld
+    okular
+    bore
+    bore-cli
     blender
     virtiofsd
     anki

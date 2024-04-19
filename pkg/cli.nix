@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    exiftool
     wol # wake on LAN
     topgrade
     evsieve
