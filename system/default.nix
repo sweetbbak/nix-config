@@ -14,5 +14,6 @@
     ./podman.nix
     ./appimage.nix
     ./fonts.nix
+    ./binfmt.nix
   ];
 }
