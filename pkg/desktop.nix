@@ -2,6 +2,8 @@
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
     stremio
+    tailscale
+    openvpn
     qbittorrent
     transmission_4
     firewalld
