@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    stremio
+    qbittorrent
+    transmission_4
     firewalld
     okular
     bore

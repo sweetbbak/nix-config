@@ -31,6 +31,9 @@
     pkg-config
     meson
 
+    # Android
+    android-studio
+
     # Zig
     zig
     zls
@@ -47,6 +50,7 @@
     # HTML CSS JS
     bun
     nodejs_21
+    typescript
     emmet-ls
     nodePackages.prettier
 

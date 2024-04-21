@@ -5,6 +5,6 @@
     nix-prefetch # get sha/hash info for flakes
     nixpkgs-lint
     nixpkgs-fmt
-    nixfmt
+    nixfmt-classic
   ];
 }
