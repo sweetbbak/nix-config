@@ -15,5 +15,6 @@
     ./appimage.nix
     ./fonts.nix
     ./binfmt.nix
+    ./tailscale.nix
   ];
 }

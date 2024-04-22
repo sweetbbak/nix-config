@@ -3,6 +3,7 @@
     # Go
     go
     gopls
+    delve
     gotools
     goreleaser
 
