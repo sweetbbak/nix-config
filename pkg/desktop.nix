@@ -1,6 +1,11 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    sunshine
+    ironbar
+    sassc
+    dart-sass
+    brightnessctl
     stremio
     tailscale
     openvpn
