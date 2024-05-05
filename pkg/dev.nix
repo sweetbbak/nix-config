@@ -13,11 +13,22 @@
     sqlite
     sqlite-interactive
 
+    # C#
+    dotnet-sdk_7
+    csharp-ls
+
+    # java
+    java-language-server
+    gradle
+    openjdk11-bootstrap
+
     # Rust
     rustup
 
     # Python
     python3
+    virtualenv
+    python311Packages.pip
 
     # C and C++
     autoconf
@@ -59,6 +70,9 @@
     gdb
     patchelf
     shfmt
+    iaito
+    radare2
+    imhex
 
     # Lua and LSP
     luaPackages.image-nvim

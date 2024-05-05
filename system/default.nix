@@ -1,4 +1,9 @@
-{config, ...}: {
+{
+  config,
+  sops-nix,
+  inputs,
+  ...
+}: {
   imports = [
     ./boot.nix
     ./flatpak.nix

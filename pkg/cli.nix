@@ -1,6 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     exiftool
+    sops
+    age
+    apktool
+    jadx
+    hyfetch
     wol # wake on LAN
     topgrade
     evsieve

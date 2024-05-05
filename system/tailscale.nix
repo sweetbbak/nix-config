@@ -2,13 +2,23 @@
   pkgs,
   config,
   lib,
+  # sops-nix,
   ...
 }: {
+  # imports = [<sops-nix/modules/sops>];
   services.tailscale.enable = true;
 
   # networking.firewall.allowedUDPPorts = [
   #   ${services.tailscale.port}
   # ];
+
+  # sops.defaultSopsFile = ../secrets/tailscale.yaml;
+  # sops.secrets = {
+  #   tskey_auth = {
+  #     owner = "sweet";
+  #     group = "users";
+  #   };
+  # };
 
   systemd.services.tailscale-autoconnect = {
     description = "Automatic connection to Tailscale";
@@ -34,6 +44,7 @@
 
       # otherwise authenticate with tailscale
       ${tailscale}/bin/tailscale up -authkey tskey-auth-kijSBk7pFp11CNTRL-23EkiMrGswTiruwZJ8TjwTpSrVXsP5p3
+      # ${tailscale}/bin/tailscale up -authkey $(cat /run/secrets/tskey_auth)
     '';
   };
 }

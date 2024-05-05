@@ -5,15 +5,22 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
+
     nix-ld.url = "github:Mic92/nix-ld";
     nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+
     nyxpkgs.url = "github:NotAShelf/nyxpkgs";
+    sops-nix.url = "github:Mic92/sops-nix";
+
+    scenefx.url = "github:wlrfx/scenefx?rev=e6bc2467d43219f4b06beb3e750b66d444b679b2";
+    scenefx.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
     nix-ld,
+    sops-nix,
     home-manager,
     ...
   }: {
@@ -21,6 +28,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         nix-ld.nixosModules.nix-ld
+        sops-nix.nixosModules.sops
         ./configuration.nix
       ];
     };
@@ -36,6 +44,7 @@
 
       modules = [
         # ./home.nix
+        ./mkpkgs
         /home/sweet/.config/home-manager/home.nix
         # ...
       ];

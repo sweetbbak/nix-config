@@ -2,6 +2,9 @@
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
     sunshine
+    proot
+    niri
+    labwc
     ironbar
     sassc
     dart-sass
