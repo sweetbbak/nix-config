@@ -73,6 +73,8 @@
     iaito
     radare2
     imhex
+    awscli
+    s3scanner
 
     # Lua and LSP
     luaPackages.image-nvim

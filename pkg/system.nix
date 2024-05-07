@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     pulseaudioFull
+    lxc
     virt-manager
     libguestfs
     podman-compose
