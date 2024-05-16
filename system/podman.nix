@@ -1,13 +1,30 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
+  virtualisation.containers = {
+    enable = true;
+  };
+
+  hardware.nvidia-container-toolkit.enable = true;
+
   virtualisation.podman = {
     enable = true;
-    dockerCompat = true;
+    enableNvidia = true;
+    dockerCompat = false;
     defaultNetwork.settings.dns_enabled = true;
   };
-  environment.systemPackages = [pkgs.distrobox];
+
+  # virtualisation.docker = {
+  #   enable = true;
+  #   enableNvidia = true;
+  #   daemon.settings = {
+  #     features = {
+  #       cdi = true;
+  #     };
+  #   };
+  # };
+
+  environment.systemPackages = with pkgs; [
+    distrobox
+    nvidia-podman
+    cudatoolkit
+  ];
 }

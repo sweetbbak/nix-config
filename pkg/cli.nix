@@ -1,6 +1,14 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    # nvidia-podman
+    nvidia-container-toolkit
+    # cudaPackages_11.cuda_nvml_dev
+    cudatoolkit
+    crun
+    dig
+    cachix
     exiftool
+    flite
     sops
     age
     apktool

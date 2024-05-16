@@ -61,7 +61,7 @@
 
     # HTML CSS JS
     bun
-    nodejs_21
+    nodejs
     typescript
     emmet-ls
     nodePackages.prettier
@@ -73,6 +73,7 @@
     iaito
     radare2
     imhex
+    ghidra
     awscli
     s3scanner
 

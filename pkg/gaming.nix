@@ -10,12 +10,12 @@
     gamescope
     # yuzu-ea
 
-    ryujinx
+    # ryujinx
     # rpcs3
     dolphin-emu
     retroarchFull
 
-    minecraft
+    # minecraft
     prismlauncher
     fabric-installer
   ];
