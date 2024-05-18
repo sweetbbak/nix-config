@@ -14,25 +14,29 @@
     ./scripts
     ./pkg
     ./modules
-    # ./modules/vfio
+    ./modules/vfio
   ];
 
   nixpkgs.config.allowUnfree = true;
   security.sudo.wheelNeedsPassword = false;
 
+  networking.extraHosts = "192.168.0.102 localpi";
+
+  # networking.nameservers = [
+  #   "192.168.0.102"
+  #   "1.1.1.1"
+  # ];
+
   networking.hostName = "nixos"; # Define your hostname.
-  boot.kernel.sysctl = {
-    "fs.inotify.max_user_instances" = 4096;
-    "fs.inotify.max_user_watches" = 524288;
-  };
 
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
-  # Temporary fix for build failure
-  systemd.services.NetworkManager-wait-online.enable = false;
 
-  # services.qemu-passthrough.enable = false;
+  # Temporary fix for build failure
+  # systemd.services.NetworkManager-wait-online.enable = false;
+
+  services.qemu-passthrough.enable = false;
   # services.vfio.enable = true;
 
   users.users.sweet = {

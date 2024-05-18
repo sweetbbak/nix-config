@@ -7,7 +7,6 @@
 
   virtualisation.podman = {
     enable = true;
-    enableNvidia = true;
     dockerCompat = false;
     defaultNetwork.settings.dns_enabled = true;
   };

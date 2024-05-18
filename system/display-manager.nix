@@ -10,7 +10,7 @@
         command = ''
           ${pkgs.greetd.tuigreet}/bin/tuigreet \
              --time --cmd Hyprland \
-            --sessions ${config.services.xserver.displayManager.sessionData.desktops}/share/xsessions:${config.services.xserver.displayManager.sessionData.desktops}/share/wayland-sessions:/run/current-system/sw/share/wayland-sessions/:/run/current-system/sw/share/xsessions/ \
+            --sessions ${config.services.displayManager.sessionData.desktops}/share/xsessions:${config.services.displayManager.sessionData.desktops}/share/wayland-sessions:/run/current-system/sw/share/wayland-sessions/:/run/current-system/sw/share/xsessions/ \
             --remember \
             --remember-user-session \
             --user-menu \
