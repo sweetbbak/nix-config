@@ -3,6 +3,7 @@
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
+    cascadia-code
     liberation_ttf
     gohufont
     cozette
@@ -23,5 +24,6 @@
     symbola
     noto-fonts-color-emoji
     material-icons
+    udev-gothic-nf
   ];
 }

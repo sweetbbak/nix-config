@@ -14,6 +14,11 @@
 
     scenefx.url = "github:wlrfx/scenefx?rev=e6bc2467d43219f4b06beb3e750b66d444b679b2";
     scenefx.inputs.nixpkgs.follows = "nixpkgs";
+
+    matugen = {
+      url = "github:InioX/Matugen";
+      # ref = "refs/tags/matugen-v0.10.0";
+    };
   };
 
   outputs = inputs @ {

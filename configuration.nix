@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   nix = {
     # package = pkgs.nixUnstable;
     package = pkgs.nixFlakes;
@@ -57,6 +61,16 @@
   environment.pathsToLink = ["/share/zsh"];
   environment.shells = with pkgs; [zsh bash];
 
+  # environment.homeBinInPath = true;
+  environment.variables = {
+    FREETYPE_PROPERTIES = "cff:no-stem-darkening=0 autofitter:no-stem-darkening=0";
+  };
+
+  fonts.fontconfig = {
+    hinting.enable = true;
+    hinting.style = "medium"; # none slight medium full - slight is fuzzy and full is stiffer
+  };
+
   system.build.manual.manual.enable = true;
   documentation = {
     dev.enable = true;
@@ -74,6 +88,11 @@
     iptables -D nixos-fw -p tcp --source 192.0.2.0/24 --dport 10:33333 -j nixos-fw-accept || true
     iptables -D nixos-fw -p udp --source 192.0.2.0/24 --dport 10:33333 -j nixos-fw-accept || true
   '';
+
+  # environment.systemPackages = with pkgs; [
+  #   # ...
+  #   inputs.matugen.packages.${system}.default
+  # ];
 
   system.stateVersion = "23.11";
 }
