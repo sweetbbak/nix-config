@@ -43,9 +43,9 @@
       fi
 
       # otherwise authenticate with tailscale
-      # ${pkgs.tailscale}/bin/tailscale up -authkey tskey-auth-kijSBk7pFp11CNTRL-23EkiMrGswTiruwZJ8TjwTpSrVXsP5p3
-      # ${pkgs.tailscale}/bin/tailscale up -authkey $(cat /run/secrets/tskey_auth)
-      ${pkgs.tailscale}/bin/tailscale up -authkey ${builtins.readFile /etc/nixos/.tailscale.txt}
+      ${pkgs.tailscale}/bin/tailscale up -authkey $(cat /etc/nixos/.tailscale.txt)
     '';
   };
 }
+# ${pkgs.tailscale}/bin/tailscale up -authkey ${builtins.readFile /etc/nixos/.tailscale.txt}
+

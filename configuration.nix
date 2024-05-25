@@ -18,6 +18,7 @@
     ./scripts
     ./pkg
     ./modules
+    ./mkpkgs
     ./modules/vfio
   ];
 
@@ -42,6 +43,8 @@
 
   services.qemu-passthrough.enable = false;
   # services.vfio.enable = true;
+
+  # services.hardware.openrgb.enable = true;
 
   users.users.sweet = {
     isNormalUser = true;

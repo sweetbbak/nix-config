@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    emote
+    openrgb-with-all-plugins
     ruffle
     sunshine
     proot

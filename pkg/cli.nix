@@ -1,8 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    # nvidia-podman
+    openai-whisper-cpp
+    bc
+    at
     nvidia-container-toolkit
-    # cudaPackages_11.cuda_nvml_dev
     cudatoolkit
     crun
     dig

@@ -17,5 +17,6 @@
     ./appimage.nix
     ./binfmt.nix
     ./fonts.nix
+    # ./openrgb.nix
   ];
 }
