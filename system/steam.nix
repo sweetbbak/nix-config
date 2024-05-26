@@ -1,9 +1,4 @@
-{
-  pkgs,
-  config,
-  lib,
-  ...
-}: {
+{...}: {
   # Steam Configuration
   programs.steam = {
     enable = true;
@@ -12,5 +7,5 @@
     gamescopeSession.enable = true;
   };
 
-  # TODO: add lutris, sys wine etc...
+  programs.gamemode.enable = true;
 }

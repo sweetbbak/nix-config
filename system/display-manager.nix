@@ -1,6 +1,7 @@
 {
   pkgs,
   config,
+  lib,
   ...
 }: {
   services.greetd = {
@@ -21,5 +22,25 @@
         user = "greeter";
       };
     };
+  };
+
+  environment.etc = {
+    "greetd/environments".text = lib.mkAfter ''
+      dwl
+    '';
+    "greetd/sessions/dwl.dekstop".text = ''
+      [Desktop Entry]
+      Name=dwl
+      Comment=dwm for Wayland
+      Exec=dwl
+      Type=Application
+    '';
+    "greetd/sessions/sway-fx.dekstop".text = ''
+      [Desktop Entry]
+      Name=swayfx
+      Comment=swayfx version of sway
+      Exec=sway
+      Type=Application
+    '';
   };
 }

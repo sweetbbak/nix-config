@@ -2,6 +2,7 @@
   environment.systemPackages = with pkgs; [
     openai-whisper-cpp
     bc
+    timer
     at
     nvidia-container-toolkit
     cudatoolkit

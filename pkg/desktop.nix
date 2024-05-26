@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    swayfx
     emote
     openrgb-with-all-plugins
     ruffle
@@ -27,7 +28,7 @@
     xfce.thunar-archive-plugin
     gnome.file-roller
     juno-theme
-    # librum
+    librum
     nicotine-plus
     google-chrome
     swaynotificationcenter
