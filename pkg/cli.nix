@@ -1,5 +1,19 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    xdg-ninja
+    bpftrace
+    mpvpaper
+    libtree
+    wlr-which-key
+    scope-tui
+    ripdrag
+    cava
+    exfat
+    exfatprogs
+    ytfzf
+    fdk-aac-encoder
+    hugo
+    zs
     openai-whisper-cpp
     bc
     timer

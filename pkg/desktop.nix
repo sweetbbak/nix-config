@@ -1,7 +1,11 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    olive-editor # new video editing software
+    rtl8761b-firmware # bluetooth firmware
     swayfx
+    river
+    rnote
     emote
     openrgb-with-all-plugins
     ruffle

@@ -31,6 +31,7 @@
     python311Packages.pip
 
     # C and C++
+    valgrind-light
     autoconf
     gcc
     gnumake

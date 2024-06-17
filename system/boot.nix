@@ -15,12 +15,13 @@
   };
 
   boot.consoleLogLevel = 1;
-  boot.loader.systemd-boot.configurationLimit = 3;
+  boot.loader.systemd-boot.configurationLimit = 1;
 
   boot.plymouth = {
     enable = true;
     themePackages = [pkgs.adi1090x-plymouth-themes];
-    theme = "colorful_sliced"; # cuts, colorful_loop, colorful, circle, abstract_rings_alt
+    # theme = "colorful_sliced"; # cuts, colorful_loop, colorful, circle, abstract_rings_alt
+    theme = "cuts"; # cuts, colorful_loop, colorful, circle, abstract_rings_alt
   };
 
   # boot.kernelPackages = pkgs.linuxPackages;

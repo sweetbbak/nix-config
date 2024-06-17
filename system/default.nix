@@ -7,7 +7,7 @@
     ./gpu.nix
     ./virt.nix
     ./opengl.nix
-    ./wm.nix
+    # ./wm.nix
     ./polkit.nix
     ./tailscale.nix
     ./display-manager.nix

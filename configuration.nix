@@ -18,7 +18,7 @@
     ./scripts
     ./pkg
     ./modules
-    ./mkpkgs
+    ./pkgs
     ./modules/vfio
   ];
 
@@ -39,11 +39,10 @@
   networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Temporary fix for build failure
-  # systemd.services.NetworkManager-wait-online.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
 
   services.qemu-passthrough.enable = false;
   # services.vfio.enable = true;
-
   # services.hardware.openrgb.enable = true;
 
   users.users.sweet = {
@@ -57,8 +56,8 @@
     ];
   };
 
-  nix.settings.trusted-users = ["root" "sweet"];
-  nix.settings.allowed-users = ["sweet"];
+  nix.settings.trusted-users = ["root" "sweet" "@wheel"];
+  nix.settings.allowed-users = ["sweet" "@wheel"];
 
   programs.zsh.enable = true;
   environment.pathsToLink = ["/share/zsh"];
@@ -79,6 +78,11 @@
     dev.enable = true;
     doc.enable = true;
     man.enable = true;
+  };
+
+  programs.neovim = {
+    enable = true;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   # networking.firewall.enable = false;
