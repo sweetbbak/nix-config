@@ -1,5 +1,15 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    sox
+    graphviz
+    cfonts
+    mangal
+    vkbasalt
+    vkbasalt-cli
+    tesseract
+    blahaj
+    wallust
+    torsocks
     xdg-ninja
     bpftrace
     mpvpaper
@@ -18,8 +28,8 @@
     bc
     timer
     at
-    nvidia-container-toolkit
-    cudatoolkit
+    # nvidia-container-toolkit
+    # cudatoolkit
     crun
     dig
     cachix

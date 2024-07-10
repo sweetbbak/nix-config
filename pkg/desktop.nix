@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    osu-lazer-bin
     olive-editor # new video editing software
     rtl8761b-firmware # bluetooth firmware
     swayfx
@@ -73,6 +74,5 @@
     rose-pine-gtk-theme
     tokyonight-gtk-theme
     imv
-    transmission
   ];
 }

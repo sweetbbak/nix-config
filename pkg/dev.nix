@@ -85,7 +85,7 @@
     vscode-langservers-extracted
     nodePackages.bash-language-server
     nodePackages.dockerfile-language-server-nodejs
-    nodePackages.pyright
+    pyright
     nodePackages.stylelint
     nodePackages.vim-language-server
     nodePackages.yaml-language-server

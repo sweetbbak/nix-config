@@ -17,9 +17,14 @@
     ./system
     ./scripts
     ./pkg
+    ./pkgs
     ./modules
     ./pkgs
     ./modules/vfio
+  ];
+
+  environment.systemPackages = [
+    inputs.nyxpkgs.packages.${pkgs.system}.cloneit
   ];
 
   nixpkgs.config.allowUnfree = true;

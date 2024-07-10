@@ -34,6 +34,12 @@
     matugen = {
       url = "github:InioX/Matugen";
     };
+
+    # anime game launcher
+    aagl.url = "github:ezKEa/aagl-gtk-on-nix";
+    # Or, if you follow Nixkgs release 24.05:
+    # aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
+    aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name
   };
 
   outputs = inputs @ {
@@ -41,6 +47,7 @@
     nixpkgs,
     hyprland,
     nix-ld,
+    aagl,
     sops-nix,
     ...
   }: {
@@ -55,6 +62,16 @@
         hyprland.nixosModules.default
         {programs.hyprland.enable = true;}
         ./configuration.nix
+        {
+          imports = [aagl.nixosModules.default];
+          nix.settings = aagl.nixConfig; # Set up Cachix
+          programs.anime-game-launcher.enable = true; # Adds launcher and /etc/hosts rules
+          # programs.anime-games-launcher.enable = true;
+          # programs.anime-borb-launcher.enable = true;
+          # programs.honkers-railway-launcher.enable = true;
+          # programs.honkers-launcher.enable = true;
+          programs.wavey-launcher.enable = true;
+        }
       ];
     };
 

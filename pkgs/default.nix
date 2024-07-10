@@ -14,6 +14,7 @@
 {pkgs, ...}: let
   customPkgs = {
     repl = pkgs.callPackage ./repl {};
+    cloneit = pkgs.callPackage ./cloneit {};
     SF-Pro = pkgs.callPackage ./SF-Pro {inherit (pkgs) stdenv;};
   };
 in {
