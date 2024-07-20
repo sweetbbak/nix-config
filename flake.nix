@@ -40,6 +40,12 @@
     # Or, if you follow Nixkgs release 24.05:
     # aagl.url = "github:ezKEa/aagl-gtk-on-nix/release-24.05";
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name
+
+    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # follows development branch of hyprland
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland"; # to make sure that the plugin is built for the correct version of hyprland
+    };
   };
 
   outputs = inputs @ {
@@ -60,8 +66,14 @@
         nix-ld.nixosModules.nix-ld
         sops-nix.nixosModules.sops
         hyprland.nixosModules.default
-        {programs.hyprland.enable = true;}
+        # {
+        #   programs.hyprland.enable = true;
+        #   programs.hyprland.extraConfig = ''
+        #     plugin = ${inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors}/lib/libhypr-dynamic-cursors.so
+        #   '';
+        # }
         ./configuration.nix
+        ./hypr.nix
         {
           imports = [aagl.nixosModules.default];
           nix.settings = aagl.nixConfig; # Set up Cachix

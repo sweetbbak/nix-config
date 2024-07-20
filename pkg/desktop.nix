@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   virtualisation.waydroid.enable = true;
   environment.systemPackages = with pkgs; [
+    floorp
+    ungoogled-chromium
     osu-lazer-bin
     olive-editor # new video editing software
     rtl8761b-firmware # bluetooth firmware
