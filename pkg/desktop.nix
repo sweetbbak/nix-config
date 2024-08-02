@@ -33,7 +33,8 @@
     virtiofsd
     anki
     xfce.thunar-archive-plugin
-    gnome.file-roller
+    # file-roller
+    file-roller
     juno-theme
     librum
     nicotine-plus

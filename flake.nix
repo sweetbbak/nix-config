@@ -2,18 +2,27 @@
 {
   description = "my sweet snowflake";
   inputs = {
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    # nixpkgs.url = "github:NixOS/nixpkgs/release-24.11";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable?rev=";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
 
-    nix-ld.url = "github:Mic92/nix-ld";
-    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-ld.url = "github:Mic92/nix-ld";
+    # nix-ld.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprland = {
-      url = "github:hyprwm/hyprland?ref=v0.40.0";
-      # url = "github:hyprwm/Hyprland";
-      # url = "github:hyprwm/Hyprland?submodules=1";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # hyprland = {
+    # url = "github:hyprwm/hyprland?submodules=1?ref=v0.40.0";
+    # url = "github:hyprwm/Hyprland";
+    # url = "github:hyprwm/Hyprland?submodules=1";
+    # inputs.nixpkgs.follows = "nixpkgs-stable";
+    # };
+
+    # hyprland = {
+    #   type = "git";
+    #   url = "https://github.com/hyprwm/Hyprland";
+    #   submodules = true;
+    # };
 
     hyprwm-contrib = {
       url = "github:hyprwm/contrib";
@@ -42,17 +51,17 @@
     aagl.inputs.nixpkgs.follows = "nixpkgs"; # Name
 
     # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1"; # follows development branch of hyprland
-    hypr-dynamic-cursors = {
-      url = "github:VirtCode/hypr-dynamic-cursors";
-      inputs.hyprland.follows = "hyprland"; # to make sure that the plugin is built for the correct version of hyprland
-    };
+    # hypr-dynamic-cursors = {
+    #   url = "github:VirtCode/hypr-dynamic-cursors";
+    #   inputs.hyprland.follows = "hyprland"; # to make sure that the plugin is built for the correct version of hyprland
+    # };
   };
 
   outputs = inputs @ {
     self,
     nixpkgs,
-    hyprland,
-    nix-ld,
+    # hyprland,
+    # nix-ld,
     aagl,
     sops-nix,
     ...
@@ -63,9 +72,9 @@
       specialArgs = {inherit inputs;};
 
       modules = [
-        nix-ld.nixosModules.nix-ld
+        # nix-ld.nixosModules.nix-ld
         sops-nix.nixosModules.sops
-        hyprland.nixosModules.default
+        # hyprland.nixosModules.default
         # {
         #   programs.hyprland.enable = true;
         #   programs.hyprland.extraConfig = ''

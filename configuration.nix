@@ -31,6 +31,7 @@
   security.sudo.wheelNeedsPassword = false;
 
   networking.extraHosts = "192.168.0.102 localpi";
+  programs.nix-ld.enable = true;
 
   # networking.nameservers = [
   #   "192.168.0.102"

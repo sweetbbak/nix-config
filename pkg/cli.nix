@@ -1,9 +1,18 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    x11docker
+    tinygo
+    libwebp
+    chiaki
+    qrencode
+    onefetch # code fetch for git repos and etc...
+    tokei
+    cloc # count lines of code
+    smartcrop
     sox
     graphviz
     cfonts
-    mangal
+    # mangal
     vkbasalt
     vkbasalt-cli
     tesseract
